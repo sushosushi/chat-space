@@ -22,3 +22,70 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## membersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+## messageテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|body|text||
+|image|string||
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+## userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|name|string|null: false|
+|password|string|null: false|
+|password_confirm|string|null: false|
+
+### Association
+- has_many :groups,througth: :group_users
+- has_many :groups_users
+
+## groupテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|integer|null: false|
+|name|string|null: false|
+
+### Association
+- has_many :users, through: :group_users
+- has_many :group_users
+- accepts_nested_attributes_for :group_users
+
+
+## group_userテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|id|text|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :group
+- belongs_to :user
+
+
+
