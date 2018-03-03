@@ -35,20 +35,6 @@ Things you may want to cover:
 - belongs_to :user
 
 
-## messageテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|body|text||
-|image|string||
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
-- belongs_to :user
-
-
 ## userテーブル
 
 |Column|Type|Options|
@@ -59,27 +45,30 @@ Things you may want to cover:
 |password_confirm|string|null: false|
 
 ### Association
-- has_many :groups,througth: :group_users
-- has_many :groups_users
+- has_many :groups,througth: :members
+- has_many :members
+
+
 
 ## groupテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|integer|null: false|
-|name|string|null: false|
+|user_name|integer|null: false|
+|message|string|null: false|
 
 ### Association
-- has_many :users, through: :group_users
-- has_many :group_users
-- accepts_nested_attributes_for :group_users
+- has_many :users, through: :members
+- has_many :members
+- accepts_nested_attributes_for :members
 
 
-## group_userテーブル
+## messageテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|id|text|integer|null: false, foreign_key: true|
+|body|text||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
