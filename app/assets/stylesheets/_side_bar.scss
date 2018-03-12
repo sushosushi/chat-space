@@ -1,0 +1,70 @@
+
+
+.top-message{
+  text-align: center;
+  background-color: #38AEF0;
+}
+
+.side-bar {
+  width: 300px;
+  height: 100%;
+  color: white;
+  float: left;
+  .user{
+    background-color: #253141;
+    padding: 0 20px;
+    height: 100px;
+    line-height: 100px;
+    .user__name{
+      font-size: 16px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .user__lists{
+      float: right;
+      display: inline-block;
+      .list{
+        display: inline-block;
+      }
+      .icon {
+          color: white;
+          font-size: 16px;
+      }
+    }
+  }
+
+  .side-bar__groups{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    .side-bar__group{
+      padding: 20px 0 40px;
+      .side-bar__group-name{
+        font-size: 15px;
+      }
+      .side-bar__group-massage{
+        font-size: 11px;
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
