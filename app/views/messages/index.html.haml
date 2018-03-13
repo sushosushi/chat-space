@@ -3,12 +3,8 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
 
-  -# %header
-  -# %h1.top-message
-  -#   チャットグループが作成されました。
-
-  %div.side-bar
-    %div.user
+  .side-bar
+    .user
       %h3.user__name
         sample
       %ul.user__lists
@@ -20,23 +16,23 @@
             = fa_icon 'cog', class: 'icon'
 
 
-    %div.side-bar__groups
-      %div.side-bar__group
-        %div.side-bar__group-name
+    .side-bar__groups
+      .side-bar__group
+        .side-bar__group-name
           group_sample
-        %div.side-bar__group-message
+        .side-bar__group-message
           message_sample
 
-      %div.side-bar__group
-        %div.side-bar__group-name
+      .side-bar__group
+        .side-bar__group-name
           group_sample
-        %div.side-bar__group-message
+        .side-bar__group-message
           message_sample
 
-  %div.chat-main
-    %div.chat-header.clearfix
-      %div.chat-main__header--group
-        %div.chat-main__header--group-name
+  .chat-main
+    .chat-header.clearfix
+      .chat-main__header--group
+        .chat-main__header--group-name
           sample_group
         %ul.chat-main__header--group-members
           Member:
@@ -44,43 +40,43 @@
             sample
           %li.member
             sample
-      %div.chat-main__header--edit
-        %div.chat-main__header--edit-button
+      .chat-main__header--edit
+        .chat-main__header--edit-button
           edit
 
-    %div.chat-messages
-      %div.chat-message
-        %div.chat-message__body-member-list
-          %div.chat-message__body-member
+    .chat-messages
+      .chat-message
+        .chat-message__body-member-list
+          .chat-message__body-member
             sample_member
-          %div.chat-message__body-date
+          .chat-message__body-date
             2018/03/05
-        %div.chat-message__body-message
-          %div.chat-message__body-message-content
+        .chat-message__body-message
+          .chat-message__body-message-content
             sample_message
 
-        %div.chat-message__body-member-list
-          %div.chat-message__body-member
+        .chat-message__body-member-list
+          .chat-message__body-member
             sample_member
-          %div.chat-message__body-date
+          .chat-message__body-date
             2018/03/05
-        %div.chat-message__body-message
-          %div.chat-message__body-message-content
+        .chat-message__body-message
+          .chat-message__body-message-content
             sample_message
 
-        %div.chat-message__body-member-list
-          %div.chat-message__body-member
+        .chat-message__body-member-list
+          .chat-message__body-member
             sample_member
-          %div.chat-message__body-date
+          .chat-message__body-date
             2018/03/05
-        %div.chat-message__body-message
-          %div.chat-message__body-message-content
+        .chat-message__body-message
+          .chat-message__body-message-content
             sample_message
 
-    %div.chat-footer
-      %div.chat-footer__form
+    .chat-footer
+      .chat-footer__form
         %input.form__message
-          %div.form__image
+          .form__image
             %label.form__image-icon
               = fa_icon 'picture-o', class: 'icon'
         %input.form__submit{type: 'submit', value: 'Send'}
