@@ -8,12 +8,12 @@
     padding: 0 40px;
     .chat-main__header--group{
       float: left;
-      .chat-main__header--group-name{
+      &-name{
         color: #333333;
         font-size: 20px;
         margin-top: 35px;
       }
-      .chat-main__header--group-members{
+      &-members{
         color: #999999;
         font-size: 12px;
         margin-top: 15px;
@@ -26,7 +26,7 @@
     }
     .chat-main__header--edit{
       float: right;
-      .chat-main__header--edit-button{
+      &-button{
         height: 40px;
         color: #38AEF0;
         margin-top: 28px;
@@ -42,7 +42,7 @@
     height: calc(100vh - 236px);
     padding: 46px 40px 0;
     .chat-message {
-      .chat-message__body-member-list {
+      &__body-member-list {
         display: flex;
         margin-bottom: 10px;
         .chat-message__body-member {
@@ -56,7 +56,7 @@
           padding-left: 10px;
         }
       }
-      .chat-message__body-message {
+      &__body-message {
         margin-top: 10px;
         margin-bottom: 40px;
         .chat-message__body-message-content {
@@ -69,9 +69,8 @@
 
   .chat-footer{
     background-color: #DDDDDD;
-    // height: 90px;
     padding: 20px 50px 20px 40px;
-    .chat-footer__form{
+    &__form{
       height: 50px;
       .form__message {
         border: none;
@@ -84,7 +83,7 @@
         float: left;
         height: 50px;
         padding-right: 10px;
-        .form__image-icon {
+        &-icon {
           font-size: 20px;
           line-height: 50px;
         }

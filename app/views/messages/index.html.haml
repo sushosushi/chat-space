@@ -1,86 +1,79 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
 
-  .side-bar
-    .user
-      %h3.user__name
-        sample
-      %ul.user__lists
-        %li.list
-          = link_to do
-            = fa_icon 'pencil-square-o', class: 'icon'
-        %li.list
-          = link_to do
-            = fa_icon 'cog', class: 'icon'
+.side-bar
+  .user
+    %h3.user__name
+      sample
+    %ul.user__lists
+      %li.list
+        = link_to do
+          = fa_icon 'pencil-square-o', class: 'icon'
+      %li.list
+        = link_to do
+          = fa_icon 'cog', class: 'icon'
 
 
-    .side-bar__groups
-      .side-bar__group
-        .side-bar__group-name
-          group_sample
-        .side-bar__group-message
-          message_sample
+  .side-bar__groups
+    .side-bar__group
+      .side-bar__group-name
+        group_sample
+      .side-bar__group-message
+        message_sample
 
-      .side-bar__group
-        .side-bar__group-name
-          group_sample
-        .side-bar__group-message
-          message_sample
+    .side-bar__group
+      .side-bar__group-name
+        group_sample
+      .side-bar__group-message
+        message_sample
 
-  .chat-main
-    .chat-header.clearfix
-      .chat-main__header--group
-        .chat-main__header--group-name
-          sample_group
-        %ul.chat-main__header--group-members
-          Member:
-          %li.member
-            sample
-          %li.member
-            sample
-      .chat-main__header--edit
-        .chat-main__header--edit-button
-          edit
+.chat-main
+  .chat-header.clearfix
+    .chat-main__header--group
+      .chat-main__header--group-name
+        sample_group
+      %ul.chat-main__header--group-members
+        Member:
+        %li.member
+          sample
+        %li.member
+          sample
+    .chat-main__header--edit
+      .chat-main__header--edit-button
+        edit
 
-    .chat-messages
-      .chat-message
-        .chat-message__body-member-list
-          .chat-message__body-member
-            sample_member
-          .chat-message__body-date
-            2018/03/05
-        .chat-message__body-message
-          .chat-message__body-message-content
-            sample_message
+  .chat-messages
+    .chat-message
+      .chat-message__body-member-list
+        .chat-message__body-member
+          sample_member
+        .chat-message__body-date
+          2018/03/05
+      .chat-message__body-message
+        .chat-message__body-message-content
+          sample_message
 
-        .chat-message__body-member-list
-          .chat-message__body-member
-            sample_member
-          .chat-message__body-date
-            2018/03/05
-        .chat-message__body-message
-          .chat-message__body-message-content
-            sample_message
+      .chat-message__body-member-list
+        .chat-message__body-member
+          sample_member
+        .chat-message__body-date
+          2018/03/05
+      .chat-message__body-message
+        .chat-message__body-message-content
+          sample_message
 
-        .chat-message__body-member-list
-          .chat-message__body-member
-            sample_member
-          .chat-message__body-date
-            2018/03/05
-        .chat-message__body-message
-          .chat-message__body-message-content
-            sample_message
+      .chat-message__body-member-list
+        .chat-message__body-member
+          sample_member
+        .chat-message__body-date
+          2018/03/05
+      .chat-message__body-message
+        .chat-message__body-message-content
+          sample_message
 
-    .chat-footer
-      .chat-footer__form
-        %input.form__message
-          .form__image
-            %label.form__image-icon
-              = fa_icon 'picture-o', class: 'icon'
-        %input.form__submit{type: 'submit', value: 'Send'}
-
-
-
+  .chat-footer
+    .chat-footer__form
+      %input.form__message
+        .form__image
+          %label.form__image-icon
+            = fa_icon 'picture-o', class: 'icon'
+      %input.form__submit{type: 'submit', value: 'Send'}
 
