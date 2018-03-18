@@ -1,9 +1,9 @@
-user.scssuser.scssuser.scss
+// user.scssuser.scssuser.scss
 
-.top-message{
-  text-align: center;
-  background-color: #38AEF0;
-}
+// .top-message{
+//   text-align: center;
+//   background-color: #38AEF0;
+// }
 
 .side-bar {
   width: 300px;
@@ -41,11 +41,16 @@ user.scssuser.scssuser.scss
       padding: 20px 0 40px;
       &-name{
         font-size: 15px;
+        color: white;
+        text-decoration: none;
       }
       &-massage{
         font-size: 11px;
         margin-top: 5px;
+        color: white;
+        text-decoration: none;
       }
     }
   }
 }
+
