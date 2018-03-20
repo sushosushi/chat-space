@@ -5,16 +5,15 @@
     .chat-header.clearfix
       .chat-main__header--group
         .chat-main__header--group-name
-          sample_group
+          = @group.name
         %ul.chat-main__header--group-members
           Member:
-          %li.member
-            sample
-          %li.member
-            sample
+          - @group.users.each do |g|
+            %li.member
+              = g.name
       .chat-main__header--edit
         .chat-main__header--edit-button
-          edit
+          = link_to "edit", edit_group_path(@group)
 
     .chat-messages
       = render @messages
