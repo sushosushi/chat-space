@@ -1,0 +1,28 @@
+.wrapper
+  = render 'groups/sidebar'
+
+  .chat-main
+    .chat-header.clearfix
+      .chat-main__header--group
+        .chat-main__header--group-name
+          = @group.name
+        %ul.chat-main__header--group-members
+          Member:
+          - @group.users.each do |g|
+            %li.member
+              = g.name
+      .chat-main__header--edit
+        .chat-main__header--edit-button
+          = link_to "edit", edit_group_path(@group)
+
+    .chat-messages
+      = render @messages
+
+    .chat-footer
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__image
+          = f.label :image, class: 'form__image-icon' do
+            = fa_icon 'picture-o', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'

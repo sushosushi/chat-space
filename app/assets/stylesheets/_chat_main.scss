@@ -28,11 +28,14 @@
       float: right;
       &-button{
         height: 40px;
-        color: #38AEF0;
         margin-top: 28px;
         padding: 0 20px;
         border: 1px solid #38AEF0;
         line-height: 40px;
+        a{
+          text-decoration: none;
+          color: #38AEF0;
+        }
       }
     }
   }
@@ -70,7 +73,7 @@
   .chat-footer{
     background-color: #DDDDDD;
     padding: 20px 50px 20px 40px;
-    &__form{
+    .new_message {
       height: 50px;
       .form__message {
         border: none;
@@ -86,6 +89,9 @@
         &-icon {
           font-size: 20px;
           line-height: 50px;
+          .hidden {
+            display: none;
+          }
         }
       }
       .form__submit {
