@@ -39,9 +39,11 @@ $(function() {
       $('.chat-messages').append(html);
       $('.form__message').val('');
       $('.hidden').val('');
+      $('.form__submit').prop("disabled", false)
       $('.chat-messages').animate({scrollTop: $('.chat-messages')[0].scrollHeight}, 'fast');
     })
     .fail(function(){
+      $('.form__submit').prop("disabled", false)
       alert('error');
     })
   });
