@@ -1,7 +1,7 @@
 $(function() {
 
   var search_list = $("#user-search-result");
-  $("#user-search-result").empty();
+  $(search_list).empty();
 
   function appendUser(user) {
     var html = `
@@ -43,7 +43,7 @@ $(function() {
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
     if (input == "") {
-      $("#user-search-result").empty();
+      $(search_list).empty();
     } else {
       $.ajax({
         type: 'GET',
@@ -52,7 +52,7 @@ $(function() {
         dataType: 'json'
       })
       .done(function(users) {
-        $("#user-search-result").empty();
+        $(search_list).empty();
         if(users.length !== 0) {
           users.forEach(function(user) {
             appendUser(user);
